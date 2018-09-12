@@ -40,12 +40,12 @@ public class Main {
 
         System.out.println("Please input the first number you want the system to use:");
         n1 = kbin.nextDouble();
-        System.out.printf("Please input the second number");
+        System.out.println("Please input the second number");
         n2 = kbin.nextDouble();
 
 
         mclass = val.nextInt(5) + 1;
-        System.out.println(mclass);
+        System.out.println("Testing *********** operation # done: " + mclass);
 
 
         if(mclass == 1)
@@ -73,8 +73,37 @@ public class Main {
             out = Math.pow(n1, n2);
             act = "pow";
         }
+        else
+        {
+            act = "";
+        }
 
         System.out.println("\nThe answer is: " + out + "\n Are you satisfied?");
+
+
+        while(1==1)
+        {
+            end = kbin.nextLine();
+
+            if(Objects.equals(end.toLowerCase() , "yes") && (Objects.equals(end.toLowerCase() , act)))
+            {
+                System.out.println("Correct!\nEnding Program");
+                break;
+
+            }
+            else if(Objects.equals(end.toLowerCase() , "no") && (!Objects.equals(end.toLowerCase() , act)))
+            {
+                System.out.println("Correct, Please input the operation that you think was done to your numbers");
+                break;
+
+            }
+            else
+            {
+                System.out.println("Invalid Input\nPlease input \"yes\" or \"no\"");
+            }
+        }
+
+
 
         while (1==1)
         {
@@ -93,7 +122,7 @@ public class Main {
                 }
                 break;
             }
-            if(Objects.equals(end.toLowerCase() , "sub"))
+            else if(Objects.equals(end.toLowerCase() , "sub"))
             {
                 if(mclass == 2)
                 {
@@ -105,7 +134,7 @@ public class Main {
                 }
                 break;
             }
-            if(Objects.equals(end.toLowerCase() , "div"))
+            else if(Objects.equals(end.toLowerCase() , "div"))
             {
                 if(mclass == 3)
                 {
@@ -117,7 +146,7 @@ public class Main {
                 }
                 break;
             }
-            if(Objects.equals(end.toLowerCase() , "mul"))
+            else if(Objects.equals(end.toLowerCase() , "mul"))
             {
                 if(mclass == 4)
                 {
@@ -129,7 +158,7 @@ public class Main {
                 }
                 break;
             }
-            if(Objects.equals(end.toLowerCase() , "pow"))
+            else if(Objects.equals(end.toLowerCase() , "pow"))
             {
                 if(mclass == 5)
                 {
@@ -141,7 +170,10 @@ public class Main {
                 }
                 break;
             }
-            System.out.println("Invalid Input");
+            else
+            {
+                System.out.println("Invalid Input");
+            }
         }
 
 
