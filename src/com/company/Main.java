@@ -91,11 +91,21 @@ public class Main {
                 break;
 
             }
+            else if (Objects.equals(end.toLowerCase() , "yes") && (!Objects.equals(end.toLowerCase() , act)))
+            {
+                System.out.println("Incorrect, your calculation was not performed");
+                break;
+            }
             else if(Objects.equals(end.toLowerCase() , "no") && (!Objects.equals(end.toLowerCase() , act)))
             {
                 System.out.println("Correct, Please input the operation that you think was done to your numbers");
                 break;
 
+            }
+            else if (Objects.equals(end.toLowerCase() , "no") && (Objects.equals(end.toLowerCase() , act)))
+            {
+                System.out.println("Incorrect, your calculation was performed.");
+                break;
             }
             else
             {
@@ -185,4 +195,87 @@ public class Main {
 
 
     }
+
+
+    /*
+    public static void Guess(int n = n1)
+    {
+
+
+
+        while (1==1)
+        {
+
+            end = kbin.nextLine();
+
+            if(Objects.equals(end.toLowerCase() , "add"))
+            {
+                if(mclass == 1)
+                {
+                    System.out.println("Congrats!, that is correct!\nEnding Program");
+                }
+                else
+                {
+                    System.out.println("Sorry, that is incorrect.\nEnding Program");
+                }
+                break;
+            }
+            else if(Objects.equals(end.toLowerCase() , "sub"))
+            {
+                if(mclass == 2)
+                {
+                    System.out.println("Congrats!, that is correct!\nEnding Program");
+                }
+                else
+                {
+                    System.out.println("Sorry, that is incorrect.\nEnding Program");
+                }
+                break;
+            }
+            else if(Objects.equals(end.toLowerCase() , "div"))
+            {
+                if(mclass == 3)
+                {
+                    System.out.println("Congrats!, that is correct!\nEnding Program");
+                }
+                else
+                {
+                    System.out.println("Sorry, that is incorrect.\nEnding Program");
+                }
+                break;
+            }
+            else if(Objects.equals(end.toLowerCase() , "mul"))
+            {
+                if(mclass == 4)
+                {
+                    System.out.println("Congrats!, that is correct!\nEnding Program");
+                }
+                else
+                {
+                    System.out.println("Sorry, that is incorrect.\nEnding Program");
+                }
+                break;
+            }
+            else if(Objects.equals(end.toLowerCase() , "pow"))
+            {
+                if(mclass == 5)
+                {
+                    System.out.println("Congrats!, that is correct!\nEnding Program");
+                }
+                else
+                {
+                    System.out.println("Sorry, that is incorrect.\nEnding Program");
+                }
+                break;
+            }
+            else
+            {
+                System.out.println("Invalid Input");
+            }
+        }
+
+
+    }
+    */
+
 }
